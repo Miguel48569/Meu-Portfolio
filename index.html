@@ -1,103 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo de Miguel do Nascimento Leite</title>
-  <style>
-    /* Definindo o estilo global da página */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #1c1c1c; /* Fundo preto */
-      color: #f0f0f0; /* Texto claro */
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Miguel do Nascimento Leite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Estilos Gerais */
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000; /* Fundo preto */
+        color: #fff; /* Texto branco */
+      }
 
-    /* Estilo do cabeçalho */
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #ff0000; /* Vermelho no topo */
+        color: white;
+      }
 
-    header h1 {
-      font-size: 2.5em;
-      color: #f05454; /* Cor vermelha */
-      margin-bottom: 10px;
-    }
+      /* Estilo da imagem de perfil */
+      #foto {
+        border-radius: 50%;
+        width: 150px;
+        height: auto; /* Ajusta a altura automaticamente para não achatar */
+        margin-top: 10px;
+      }
 
-    header img {
-      border-radius: 50%; /* Deixa a imagem redonda */
-      width: 150px;
-      height: 150px;
-      object-fit: cover; /* Mantém a proporção da imagem */
-      border: 4px solid #f05454; /* Borda vermelha */
-    }
+      h1 {
+        font-size: 2.5em;
+        margin: 10px 0;
+      }
 
-    /* Estilo de navegação */
-    nav {
-      margin-bottom: 20px;
-    }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-    nav a {
-      font-weight: bold;
-      color: #f05454; /* Cor vermelha */
-      text-decoration: none;
-      margin: 0 15px;
-      padding: 10px 20px;
-      border: 2px solid #f05454;
-      border-radius: 25px;
-      transition: background-color 0.3s, color 0.3s;
-    }
+      h2 {
+        color: #ff0000; /* Traços em vermelho */
+        margin-bottom: 10px;
+      }
 
-    nav a:hover {
-      background-color: #f05454;
-      color: #fff; /* Texto branco ao passar o mouse */
-    }
+      p, ul {
+        line-height: 1.6;
+      }
 
-    /* Estilo do iframe */
-    iframe {
-      width: 80%;
-      height: 400px;
-      margin: 20px auto;
-      display: block;
-      border: 2px solid #f05454; /* Borda vermelha */
-      border-radius: 10px;
-    }
-    
-    /* Rodapé */
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #f0f0f0;
-      font-size: 0.9em;
-    }
-  </style>
-</head>
-<body>
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
 
-  <header>
-    <h1>Currículo de Miguel do Nascimento Leite</h1>
-    <img src="minha foto.jpg" alt="Foto de Miguel">
-  </header>
+      ul li::before {
+        content: "•";
+        color: #ff0000; /* Pontos em vermelho */
+        padding-right: 5px;
+      }
 
-  <nav>
-    <a href="objetivo.html" target="main">Objetivo</a>
-    <a href="formacao.html" target="main">Formação</a>
-    <a href="softskills.html" target="main">Soft Skills</a>
-    <a href="identificacao.html" target="main">Identificação</a>
-  </nav>
+      /* Limitar largura e centralizar */
+      .texto-limitado {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: justify;
+      }
 
-  <iframe src="objetivo.html" name="main"></iframe>
+      /* Estilo do footer */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
 
-  <footer>
-    <p>&copy; 2024 Miguel do Nascimento Leite</p>
-  </footer>
+      footer a {
+        color: #ff0000;
+        text-decoration: none;
+      }
 
-</body>
-</html>
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsividade */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2em;
+        }
+
+        #foto {
+          width: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Miguel do Nascimento Leite</h1>
+      <img id="foto" src="minha foto.jpg" alt="Foto de Miguel">
+    </header>
+
+    <main>
+      <h2>Sobre mim</h2>
+      <div class="texto-limitado">
+        <p>
+          Sou Miguel do Nascimento Leite, estudante de Análise e Desenvolvimento de Sistemas no SENAC, atualmente no 2º período. Tenho interesse tanto em desenvolvimento front-end quanto back-end, e estou explorando as diversas possibilidades que a programação oferece. Ainda estou em processo de definir minhas preferências na área, mas adoro aprender novas tecnologias e aplicar o que aprendo em projetos práticos. Além dos estudos, sou fã de animes, mangás e jogos, que me inspiram a desenvolver habilidades criativas e resolver problemas de forma estratégica. Estou sempre buscando crescer na área de tecnologia e me aprimorar como desenvolvedor.
+        </p>
+      </div>
+
+      <h2>Formação Acadêmica</h2>
+      <ul>
+        <li>Análise e Desenvolvimento de Sistemas - SENAC (Cursando 2º período)</li>
+      </ul>
+
+      <h2>Habilidades Técnicas</h2>
+      <ul>
+        <li>HTML e CSS básico</li>
+        <li>Lógica de Programação</li>
+        <li>Conhecimentos iniciais em Front-end e Back-end</li>
+      </ul>
+
+      <h2>Projetos</h2>
+      <ul>
+        <li>Desenvolvimento de um site em HTML como parte do curso de ADS</li>
+        <li>Desenvolvimento de um site de ponto para a empresa SIDI</li>
+      </ul>
+
+      <h2>Cursos e Treinamentos</h2>
+      <ul>
+        <li>Python - Data Science Academy (Em andamento)</li>
+        <li>HTML e CSS - Curso em Vídeo, Gustavo Guanabara (Em andamento)</li>
+        <li>JavaScript - Alura (Em andamento)</li>
+      </ul>
+    </main>
+
+    <footer>
+      <footer>
+        <h2>Conecte-se</h2>
+        <p>Email: <a href="mailto:miguelleite14@hotmail.com">miguelleite14@hotmail.com</a></p>
+        <p>Telefone: (81) 98804-4961</p>
+        <p>GitHub: <a href="https://github.com/Miguel48569" target="_blank">github.com/Miguel48569</a></p>
+      </footer>
